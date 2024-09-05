@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Teaching Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            margin: 0 10px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #4CAF50;
+        }
+        section {
+            padding: 20px;
+        }
+        .topic {
+            border: 1px solid #ddd;
+            padding: 15px;
+            background-color: #fff;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        .quiz {
+            margin-top: 20px;
+        }
+        .quiz input {
+            margin-top: 10px;
+            padding: 5px;
+            width: 100px;
+        }
+        .quiz button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .quiz button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Math Teaching Website</h1>
+    <p>Learn from basic math to advanced Olympiad problems!</p>
+</header>
+
+<nav>
+    <a href="#simple-math">Simple Math</a>
+    <a href="#algebra">Algebra</a>
+    <a href="#olympiad-math">Olympiad Math</a>
+</nav>
+
+<!-- Simple Math Section -->
+<section id="simple-math" class="topic">
+    <h2>Simple Math (Addition and Subtraction)</h2>
+    <p>Here are some basic math problems like <strong>1+1, 1+2, 1-1</strong>, and more:</p>
+    <p><strong>1 + 1 = 2</strong></p>
+    <p><strong>1 + 2 = 3</strong></p>
+    <p><strong>1 + 3 = 4</strong></p>
+    <p><strong>1 - 1 = 0</strong></p>
+    <p><strong>2 + 2 = 4</strong></p>
+    <p><strong>2 + 3 = 5</strong></p>
+    <p><strong>3 - 1 = 2</strong></p>
+    <p><strong>4 - 1 = 3</strong></p>
+    <p><strong>5 - 1 = 4</strong></p>
+    <div class="quiz">
+        <h3>Simple Math Quiz:</h3>
+        <p>What is 1 + 3?</p>
+        <input type="number" id="simpleMathAnswer">
+        <button onclick="checkSimpleMath()">Submit Answer</button>
+        <p id="simpleMathFeedback"></p>
+    </div>
+</section>
+
+<!-- Algebra Section -->
+<section id="algebra" class="topic">
+    <h2>Algebra</h2>
+    <p>In algebra, we solve for unknowns using equations. For example:</p>
+    <p>If <strong>x + 2 = 5</strong>, then <strong>x = 3</strong>.</p>
+    <p>If <strong>2x = 8</strong>, then <strong>x = 4</strong>.</p>
+    <p>If <strong>3x + 2 = 11</strong>, then <strong>x = 3</strong>.</p>
+    <div class="quiz">
+        <h3>Algebra Quiz:</h3>
+        <p>If 3x + 4 = 16, what is x?</p>
+        <input type="number" id="algebraAnswer">
+        <button onclick="checkAlgebra()">Submit Answer</button>
+        <p id="algebraFeedback"></p>
+    </div>
+</section>
+
+<!-- Olympiad Math Section -->
+<section id="olympiad-math" class="topic">
+    <h2>Olympiad Math</h2>
+    <p>Here are some harder math problems commonly found in math Olympiads:</p>
+    <p><strong>If x² + 4x - 5 = 0, solve for x.</strong> (Answer: x = 1 or x = -5)</p>
+    <p><strong>Find the sum of the first 100 natural numbers.</strong> (Answer: 5050)</p>
+    <div class="quiz">
+        <h3>Olympiad Math Quiz:</h3>
+        <p>Solve for x: x² - 6x + 9 = 0</p>
+        <input type="number" id="olympiadAnswer">
+        <button onclick="checkOlympiad()">Submit Answer</button>
+        <p id="olympiadFeedback"></p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2024 Math Teaching Website</p>
+</footer>
+
+<script>
+    function checkSimpleMath() {
+        const answer = document.getElementById('simpleMathAnswer').value;
+        const feedback = document.getElementById('simpleMathFeedback');
+        if (answer == 4) {
+            feedback.innerHTML = 'Correct!';
+            feedback.style.color = 'green';
+        } else {
+            feedback.innerHTML = 'Try again.';
+            feedback.style.color = 'red';
+        }
+    }
+
+    function checkAlgebra() {
+        const answer = document.getElementById('algebraAnswer').value;
+        const feedback = document.getElementById('algebraFeedback');
+        if (answer == 4) {
+            feedback.innerHTML = 'Correct!';
+            feedback.style.color = 'green';
+        } else {
+            feedback.innerHTML = 'Try again.';
+            feedback.style.color = 'red';
+        }
+    }
+
+    function checkOlympiad() {
+        const answer = document.getElementById('olympiadAnswer').value;
+        const feedback = document.getElementById('olympiadFeedback');
+        if (answer == 3) {
+            feedback.innerHTML = 'Correct!';
+            feedback.style.color = 'green';
+        } else {
+            feedback.innerHTML = 'Try again.';
+            feedback.style.color = 'red';
+        }
+    }
+</script>
+
+</body>
+</html>
